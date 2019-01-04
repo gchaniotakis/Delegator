@@ -14,6 +14,9 @@ namespace Delegator
         public static void ProcessFile (string filename, ProcessString processor)
         {
             var content = File.ReadAllLines(filename);
+
+            var firstline = content.First(l => l.Length > 0);
+
             var line = content[0];
 
             processor(line);

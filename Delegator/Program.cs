@@ -51,6 +51,14 @@ namespace Delegator
             Callbacks.ProcessFile("test.txt", Callbacks.PrintCharCount);
             Callbacks.ProcessFile("test.txt", Console.WriteLine);
             Console.ReadKey();
+
+
+            var blog = new Blog();
+
+            var reader1 = new Reader(blog);
+            var reader2 = new Reader(blog);
+
+            blog
             
         }
 
