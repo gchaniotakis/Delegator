@@ -58,7 +58,7 @@ namespace Delegator
             var reader1 = new Reader(blog);
             var reader2 = new Reader(blog);
 
-            blog
+            blog.Post ("test", "test content");
             
         }
 
