@@ -25,15 +25,26 @@ namespace Delegator
             double a = 5.0;
             double b = 12.33;
 
-            //Calculator add = Add;
-
-            //var result = add(a, b);
-            //var r2 = add.Invoke(a, b);
+            //Calculator calculator = Add;
+            //var result = calculator(a, b);
+            //var r2 = calculator.Invoke(a, b);
+            //calculator = Subtract;
+            //result = calculator (a,b);
 
             var op = "*";
             var result = operations[op](a, b);
             Console.WriteLine(result);
             Console.Read();
+
+
+            Calculator multicast = Add;
+            multicast += Subtract;
+            multicast += Multiply;
+
+            var final = multicast(5, 5);
+            Console.WriteLine(multicast);
+            Console.Read();
+            
         }
 
         static double Add (double x, double y)
