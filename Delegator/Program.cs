@@ -43,7 +43,14 @@ namespace Delegator
 
             var final = multicast(5, 5);
             Console.WriteLine(multicast);
-            Console.Read();
+            Console.ReadKey();
+
+
+
+            Callbacks.ProcessFile("test.txt", Callbacks.PrintLine);
+            Callbacks.ProcessFile("test.txt", Callbacks.PrintCharCount);
+            Callbacks.ProcessFile("test.txt", Console.WriteLine);
+            Console.ReadKey();
             
         }
 
